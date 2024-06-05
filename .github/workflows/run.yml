@@ -1,0 +1,26 @@
+name: actions-trial
+
+on: [push]
+
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up permissions
+      run: chmod +x gcd.sh test_gcd.sh
+
+    - name: Run tests
+      run: ./test_gcd.sh
+
+
+
+
+
+
+
+
+
+
